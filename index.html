@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to make a website-Easy Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-8">
+			<div class="image-box">
+				<h1>Play Music</h1>
+				<div class="partner-logo">
+					<img src="itunes.png">
+					<img src="saavn.png">
+					<img src="spotify.png">
+					<img src="gaana.png">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-container">
+				<div class="menu">
+					<button type="button" id="loginbtn" onclick="openlogintab()"> Login</button>
+					<button type="button" id="registerbtn" onclick="openregistertab()"> Register</button>
+				</div>
+				<div class="form-box">
+					<div id="login-tab">
+						<h1>I've an account</h1>
+						<input type="text" placeholder="Username">
+						<input type="password" placeholder="password">
+						<button type="button">Log In</button>
+					</div>
+
+					<div id="register-tab">
+						<h1>I'm new user</h1>
+						<input type="text" placeholder="Username">
+						<input type="email" placeholder="email">
+						<input type="password" placeholder="password">
+						<button type="button">Register</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function openregistertab(){
+			document.getElementById("register-tab").style.display="block";
+			document.getElementById("login-tab").style.display="none";
+			document.getElementById("registerbtn").style.borderBottom="4px solid #c200ff";
+			document.getElementById("loginbtn").style.borderBottom="none";
+		}
+		function openlogintab(){
+			document.getElementById("login-tab").style.display="block";
+			document.getElementById("register-tab").style.display="none";
+			document.getElementById("loginbtn").style.borderBottom="4px solid #c200ff";
+			document.getElementById("registerbtn").style.borderBottom="none";
+		}
+	</script>
+</body>
+</html>
